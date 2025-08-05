@@ -1,0 +1,22 @@
+name: Workflow Test
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print build
+        run: echo 'build'
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: print chrome test
+        run: echo 'chrome test'
+      - name: print edge test
+        run: echo 'edge test'
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print deploy
+        run: echo 'deploy'
