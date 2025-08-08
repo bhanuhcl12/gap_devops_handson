@@ -1,0 +1,22 @@
+name : Matrices
+
+on: workflow_dispatch
+
+jobs:
+  matrix-jobs:
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - widnows-latest
+        java-version: [17,21]
+    steps:
+        - name: Setup Java SDK
+          uses: actions/setup-java@v3.14.1
+          with:
+            java-version: ${{matrix.java-version}}
+            distribution: microsoft
+        
+        
+  
