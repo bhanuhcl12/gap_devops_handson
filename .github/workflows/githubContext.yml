@@ -15,3 +15,9 @@ jobs:
         echo 'Repository workflow name ${{github.workflow}}'
         echo 'Repository actor ${{github.actor}}'
         echo 'Repository event ${{github.event}}'
+    - name: examples
+      if: github.ref == 'refs/heads/main'
+      run: echo 'deploy'
+    - if: github.event_name == 'pull_request'
+      run: echo 'trigger the workflow'
+      
