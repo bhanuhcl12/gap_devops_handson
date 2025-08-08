@@ -9,6 +9,6 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v5.6.0
       with:
-        python-version: 4
+        python-version: 3
     - name: print python version
       run: python -v
